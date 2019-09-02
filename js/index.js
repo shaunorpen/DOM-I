@@ -45,3 +45,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 document.querySelectorAll('nav a').forEach(
   (item, index) => item.textContent = Object.values(siteContent.nav)[index]
 );
+
+// Set CTA image
+document.getElementById('cta-img').setAttribute('src', siteContent.cta["img-src"]);
+
+// Set CTA h1 text
+document.getElementsByTagName('h1')[0].textContent = siteContent.cta.h1;
+
+// Set CTA button text
+document.getElementsByTagName('button')[0].textContent = siteContent.cta.button;
