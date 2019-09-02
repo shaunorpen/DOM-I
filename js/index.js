@@ -57,3 +57,24 @@ document.getElementsByTagName('button')[0].textContent = siteContent.cta.button;
 
 // Set main-content image
 document.getElementById('middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Set main-content h4 and p content
+
+function findValueBySuffix(object, suffix) {
+  result = [];
+  for (var property in object) {
+    if (object.hasOwnProperty(property) && 
+       property.toString().endsWith(suffix)) {
+       result.push(object[property]);
+    }
+  }
+  return result;
+}
+
+document.querySelectorAll('.text-content h4').forEach(
+  (item, index) => item.textContent = findValueBySuffix(siteContent["main-content"], 'h4')[index]
+);
+
+document.querySelectorAll('.text-content p').forEach(
+  (item, index) => item.textContent = findValueBySuffix(siteContent["main-content"], 'content')[index]
+);
