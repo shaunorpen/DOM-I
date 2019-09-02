@@ -102,7 +102,7 @@ const newNav2 = document.createElement('a');
 newNav2.textContent = "Blog";
 newNav2.style.color = 'green';
 
-document.querySelector('nav').appendChild(newNav1);
+document.querySelector('nav').prepend(newNav1);
 document.querySelector('nav').appendChild(newNav2);
 
 // Set page background color with JavaScript
