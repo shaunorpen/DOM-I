@@ -97,8 +97,10 @@ document.querySelectorAll('nav a').forEach(
 // Add child using .appendChild
 const newNav1 = document.createElement('a');
 newNav1.textContent = "Awards";
+newNav1.style.color = 'green';
 const newNav2 = document.createElement('a');
 newNav2.textContent = "Blog";
+newNav2.style.color = 'green';
 
 document.querySelector('nav').appendChild(newNav1);
 document.querySelector('nav').appendChild(newNav2);
