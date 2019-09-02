@@ -78,3 +78,10 @@ document.querySelectorAll('.text-content h4').forEach(
 document.querySelectorAll('.text-content p').forEach(
   (item, index) => item.textContent = findValueBySuffix(siteContent["main-content"], 'content')[index]
 );
+
+// Set contact details
+document.querySelector('.contact h4').textContent = siteContent.contact["contact-h4"];
+
+document.querySelectorAll('.contact p').forEach(
+  (item, index) => item.textContent = Object.values(siteContent.contact)[index + 1]
+);
