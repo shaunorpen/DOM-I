@@ -85,3 +85,6 @@ document.querySelector('.contact h4').textContent = siteContent.contact["contact
 document.querySelectorAll('.contact p').forEach(
   (item, index) => item.textContent = Object.values(siteContent.contact)[index + 1]
 );
+
+// Set footer
+document.querySelector('footer p').textContent = siteContent.footer.copyright;
