@@ -102,3 +102,7 @@ newNav2.textContent = "Blog";
 
 document.querySelector('nav').appendChild(newNav1);
 document.querySelector('nav').appendChild(newNav2);
+
+// Set page background color with JavaScript
+document.body.style.backgroundColor = "lightgrey";
+
