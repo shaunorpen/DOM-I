@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // Add all the navigation links to the top of the page
 document.querySelectorAll('nav a').forEach(
@@ -54,3 +54,6 @@ document.getElementsByTagName('h1')[0].textContent = siteContent.cta.h1;
 
 // Set CTA button text
 document.getElementsByTagName('button')[0].textContent = siteContent.cta.button;
+
+// Set main-content image
+document.getElementById('middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
