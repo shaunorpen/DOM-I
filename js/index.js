@@ -106,3 +106,6 @@ document.querySelector('nav').appendChild(newNav2);
 // Set page background color with JavaScript
 document.body.style.backgroundColor = "lightgrey";
 
+// Add an onclick event to a button
+document.getElementsByTagName('button')[0].onclick = 
+  () => document.body.style.backgroundColor = "gold";
