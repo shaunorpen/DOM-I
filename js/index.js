@@ -93,3 +93,12 @@ document.querySelector('footer p').textContent = siteContent.footer.copyright;
 document.querySelectorAll('nav a').forEach(
   item => item.style.color = 'green'
 );
+
+// Add child using .appendChild
+const newNav1 = document.createElement('a');
+newNav1.textContent = "Awards";
+const newNav2 = document.createElement('a');
+newNav2.textContent = "Blog";
+
+document.querySelector('nav').appendChild(newNav1);
+document.querySelector('nav').appendChild(newNav2);
