@@ -88,3 +88,8 @@ document.querySelectorAll('.contact p').forEach(
 
 // Set footer
 document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
+// Set navigation text to green
+document.querySelectorAll('nav a').forEach(
+  item => item.style.color = 'green'
+);
