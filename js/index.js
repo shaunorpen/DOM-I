@@ -39,4 +39,75 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Add all the navigation links to the top of the page
+document.querySelectorAll('nav a').forEach(
+  (item, index) => item.textContent = Object.values(siteContent.nav)[index]
+);
+
+// Set CTA image
+document.getElementById('cta-img').setAttribute('src', siteContent.cta["img-src"]);
+
+// Set CTA h1 text
+document.getElementsByTagName('h1')[0].textContent = siteContent.cta.h1;
+
+// Set CTA button text
+document.getElementsByTagName('button')[0].textContent = siteContent.cta.button;
+
+// Set main-content image
+document.getElementById('middle-img').setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Set main-content h4 and p content
+
+function findValueBySuffix(object, suffix) {
+  result = [];
+  for (var property in object) {
+    if (object.hasOwnProperty(property) && 
+       property.toString().endsWith(suffix)) {
+       result.push(object[property]);
+    }
+  }
+  return result;
+}
+
+document.querySelectorAll('.text-content h4').forEach(
+  (item, index) => item.textContent = findValueBySuffix(siteContent["main-content"], 'h4')[index]
+);
+
+document.querySelectorAll('.text-content p').forEach(
+  (item, index) => item.textContent = findValueBySuffix(siteContent["main-content"], 'content')[index]
+);
+
+// Set contact details
+document.querySelector('.contact h4').textContent = siteContent.contact["contact-h4"];
+
+document.querySelectorAll('.contact p').forEach(
+  (item, index) => item.textContent = Object.values(siteContent.contact)[index + 1]
+);
+
+// Set footer
+document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
+// Set navigation text to green
+document.querySelectorAll('nav a').forEach(
+  item => item.style.color = 'green'
+);
+
+// Add child using .appendChild
+const newNav1 = document.createElement('a');
+newNav1.textContent = "Awards";
+newNav1.style.color = 'green';
+const newNav2 = document.createElement('a');
+newNav2.textContent = "Blog";
+newNav2.style.color = 'green';
+
+document.querySelector('nav').prepend(newNav1);
+document.querySelector('nav').appendChild(newNav2);
+
+// Set page background color with JavaScript
+document.body.style.backgroundColor = "lightgrey";
+
+// Add an onclick event to a button
+document.getElementsByTagName('button')[0].onclick = 
+  () => document.body.style.backgroundColor = "gold";
