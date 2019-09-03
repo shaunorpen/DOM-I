@@ -63,8 +63,7 @@ document.getElementById('middle-img').setAttribute('src', siteContent["main-cont
 function findValueBySuffix(object, suffix) {
   result = [];
   for (var property in object) {
-    if (object.hasOwnProperty(property) && 
-       property.toString().endsWith(suffix)) {
+    if (property.toString().endsWith(suffix)) {
        result.push(object[property]);
     }
   }
